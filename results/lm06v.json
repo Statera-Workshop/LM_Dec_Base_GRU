@@ -1,0 +1,169 @@
+{
+ "model": "gru",
+ "repo": "(new) Legacy baseline, PyTorch nn.GRU",
+ "target_repo": "LM_Dec_Base_GRU",
+ "category": "Base",
+ "upstream": "torch.nn.GRU (cuDNN); classic baseline requested 2026-10-22",
+ "unified": [
+  "4 layers, hidden 896 (to match LSTM size), input dim 512"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm06v",
+ "started": "2026-11-02 07:47:06",
+ "smoke": false,
+ "weights": "lm06long_model.pt",
+ "rows": {
+  "512": {
+   "normal": {
+    "acc": 0.40234375,
+    "acc_updated": 0.759765625,
+    "acc_unchanged": 0.044921875,
+    "stale_rate": 0.001953125,
+    "by_distance": {
+     "0-256": [
+      0.753,
+      93
+     ],
+     "256-1024": [
+      0.367,
+      931
+     ],
+     "1024-4096": [
+      null,
+      0
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   },
+   "nohead": {
+    "acc": 0.08984375,
+    "acc_updated": 0.146484375,
+    "acc_unchanged": 0.033203125,
+    "stale_rate": 0.03125,
+    "by_distance": {
+     "0-256": [
+      0.117,
+      103
+     ],
+     "256-1024": [
+      0.087,
+      921
+     ],
+     "1024-4096": [
+      null,
+      0
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   }
+  },
+  "2048": {
+   "normal": {
+    "acc": 0.38671875,
+    "acc_updated": 0.708984375,
+    "acc_unchanged": 0.064453125,
+    "stale_rate": 0.005859375,
+    "by_distance": {
+     "0-256": [
+      0.5,
+      2
+     ],
+     "256-1024": [
+      0.718,
+      103
+     ],
+     "1024-4096": [
+      0.349,
+      919
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   },
+   "nohead": {
+    "acc": 0.083984375,
+    "acc_updated": 0.119140625,
+    "acc_unchanged": 0.048828125,
+    "stale_rate": 0.029296875,
+    "by_distance": {
+     "0-256": [
+      null,
+      0
+     ],
+     "256-1024": [
+      0.091,
+      99
+     ],
+     "1024-4096": [
+      0.083,
+      925
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   }
+  },
+  "8192": {
+   "normal": {
+    "acc": 0.4013671875,
+    "acc_updated": 0.734375,
+    "acc_unchanged": 0.068359375,
+    "stale_rate": 0.009765625,
+    "by_distance": {
+     "0-256": [
+      null,
+      0
+     ],
+     "256-1024": [
+      0.4,
+      5
+     ],
+     "1024-4096": [
+      0.742,
+      89
+     ],
+     "4096-inf": [
+      0.369,
+      930
+     ]
+    }
+   },
+   "nohead": {
+    "acc": 0.0859375,
+    "acc_updated": 0.12109375,
+    "acc_unchanged": 0.05078125,
+    "stale_rate": 0.03125,
+    "by_distance": {
+     "0-256": [
+      null,
+      0
+     ],
+     "256-1024": [
+      null,
+      0
+     ],
+     "1024-4096": [
+      0.152,
+      99
+     ],
+     "4096-inf": [
+      0.079,
+      925
+     ]
+    }
+   }
+  }
+ },
+ "seconds": 27.6
+}

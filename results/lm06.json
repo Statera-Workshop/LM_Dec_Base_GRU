@@ -1,0 +1,150 @@
+{
+ "model": "gru",
+ "repo": "(new) Legacy baseline, PyTorch nn.GRU",
+ "target_repo": "LM_Dec_Base_GRU",
+ "category": "Base",
+ "upstream": "torch.nn.GRU (cuDNN); classic baseline requested 2026-10-22",
+ "unified": [
+  "4 layers, hidden 896 (to match LSTM size), input dim 512"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm06",
+ "started": "2026-10-29 16:50:45",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "diverged": false,
+ "bf16": true,
+ "final_loss": 1.9044184684753418,
+ "minutes": 12.4,
+ "history": [
+  {
+   "step": 500,
+   "loss": 4.178945064544678,
+   "acc": 0.01953125,
+   "acc_updated": 0.015625,
+   "acc_unchanged": 0.0234375,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 1000,
+   "loss": 4.628556728363037,
+   "acc": 0.01171875,
+   "acc_updated": 0.0,
+   "acc_unchanged": 0.0234375,
+   "stale_rate": 0.03125
+  },
+  {
+   "step": 1500,
+   "loss": 4.025739669799805,
+   "acc": 0.05078125,
+   "acc_updated": 0.03125,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0703125
+  },
+  {
+   "step": 2000,
+   "loss": 2.85741925239563,
+   "acc": 0.3046875,
+   "acc_updated": 0.5390625,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 2500,
+   "loss": 2.320335626602173,
+   "acc": 0.3828125,
+   "acc_updated": 0.6875,
+   "acc_unchanged": 0.078125,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 3000,
+   "loss": 2.2725584506988525,
+   "acc": 0.390625,
+   "acc_updated": 0.7265625,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 3500,
+   "loss": 2.011751413345337,
+   "acc": 0.37109375,
+   "acc_updated": 0.6953125,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 4000,
+   "loss": 1.909226894378662,
+   "acc": 0.38671875,
+   "acc_updated": 0.7109375,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 4500,
+   "loss": 1.8482017517089844,
+   "acc": 0.39453125,
+   "acc_updated": 0.71875,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 5000,
+   "loss": 2.0126469135284424,
+   "acc": 0.39453125,
+   "acc_updated": 0.7421875,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 5500,
+   "loss": 1.9490619897842407,
+   "acc": 0.4140625,
+   "acc_updated": 0.765625,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 6000,
+   "loss": 1.9044184684753418,
+   "acc": 0.41796875,
+   "acc_updated": 0.765625,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.396484375,
+   "acc_updated": 0.748046875,
+   "acc_unchanged": 0.044921875,
+   "stale_rate": 0.00390625
+  },
+  "2048": {
+   "acc": 0.38671875,
+   "acc_updated": 0.7080078125,
+   "acc_unchanged": 0.0654296875,
+   "stale_rate": 0.009765625
+  }
+ },
+ "config": {
+  "pairs": 8,
+  "updates": 4,
+  "queries": 4,
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048
+  ],
+  "batch": 32,
+  "steps": 6000,
+  "eval_every": 500,
+  "eval_samples": 512,
+  "max_hours": 1.5
+ },
+ "micro_batch": null,
+ "seconds": 747.5
+}

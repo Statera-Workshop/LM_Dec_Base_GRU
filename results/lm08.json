@@ -1,0 +1,50 @@
+{
+ "model": "gru",
+ "repo": "(new) Legacy baseline, PyTorch nn.GRU",
+ "target_repo": "LM_Dec_Base_GRU",
+ "category": "Base",
+ "upstream": "torch.nn.GRU (cuDNN); classic baseline requested 2026-10-22",
+ "unified": [
+  "4 layers, hidden 896 (to match LSTM size), input dim 512"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm08",
+ "started": "2026-11-09 19:32:56",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "bf16": true,
+ "final_bits": 3.2733306593985607,
+ "test": {
+  "512": {
+   "bits_full": 3.2371332128974895
+  },
+  "2048": {
+   "bits_full": 3.211397213074426,
+   "bits_last512": 3.2132895811775324,
+   "gain_from_history": 0.0018923681031064454
+  },
+  "8192": {
+   "bits_full": 3.225182826419636,
+   "bits_last512": 3.225632002108027,
+   "gain_from_history": 0.00044917568839109023
+  }
+ },
+ "config": {
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048,
+   8192
+  ],
+  "batch": 16,
+  "steps": 6000,
+  "eval_every": 1000,
+  "eval_samples": 64,
+  "tail": 256,
+  "max_hours": 1.5
+ },
+ "minutes": 9.2,
+ "seconds": 554.1
+}
